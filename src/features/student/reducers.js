@@ -1,12 +1,13 @@
-const c = require('../../app/constants');
+import {STUDENT_ADD_AGE, STUDENT_CHANGE_NAME} from "../../app/constants.js";
+
 const studentInitialState = {
     name: '',
     age: 0
 }
 
-function studentReducer(state = studentInitialState, action) {
+export function studentReducer(state = studentInitialState, action) {
     switch (action.type) {
-        case c.STUDENT_ADD_AGE:
+        case STUDENT_ADD_AGE:
             // return {
             //     ...state,
             //     age: state.age + 1
@@ -14,7 +15,7 @@ function studentReducer(state = studentInitialState, action) {
             return Object.assign({}, state, {
                 age: state.age + 1
             })
-        case c.STUDENT_CHANGE_NAME:
+        case STUDENT_CHANGE_NAME:
             // return {
             //     ...state,
             //     name: action.name
@@ -26,5 +27,3 @@ function studentReducer(state = studentInitialState, action) {
             return state
     }
 }
-
-module.exports = studentReducer;

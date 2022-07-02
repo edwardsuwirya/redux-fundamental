@@ -1,18 +1,16 @@
-const c = require("../../app/constants");
+import {STUDENT_ADD_AGE, STUDENT_CHANGE_NAME} from '../../app/constants.js';
 
-function addAgeAction() {
+export function addAgeAction() {
     return {
-        type: c.STUDENT_ADD_AGE,
+        type: STUDENT_ADD_AGE,
     }
 }
 
-function changeNameAction(newName) {
+export function changeNameAction(newName) {
     return {
-        type: c.STUDENT_CHANGE_NAME,
+        type: STUDENT_CHANGE_NAME,
         payload: {
             name: newName
         }
     }
 }
-
-module.exports = {addAgeAction, changeNameAction};

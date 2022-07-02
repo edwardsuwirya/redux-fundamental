@@ -1,12 +1,13 @@
-const c = require('../../app/constants');
+import {STUDENT_ADD_BOOK} from "../../app/constants.js";
+
 const bookInitialState = {
     student: '',
     books: []
 }
 
-function bookReducer(state = bookInitialState, action) {
+export function bookReducer(state = bookInitialState, action) {
     switch (action.type) {
-        case c.STUDENT_ADD_BOOK:
+        case STUDENT_ADD_BOOK:
             return Object.assign({}, state, {
                 student: action.payload.student,
                 books: [...state.books, action.payload.book]
@@ -15,5 +16,3 @@ function bookReducer(state = bookInitialState, action) {
             return state
     }
 }
-
-module.exports = bookReducer;

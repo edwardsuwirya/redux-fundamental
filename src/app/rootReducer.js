@@ -1,12 +1,11 @@
-const {combineReducers} = require("redux");
-const studentReducer = require('../features/student/reducers');
-const bookReducer = require('../features/book/reducers')
+import {combineReducers} from 'redux';
+import {studentReducer} from '../features/student/reducers.js';
+import {bookReducer} from '../features/book/reducers.js';
 
-function rootReducer() {
+export function rootReducer() {
     return combineReducers({
         studentReducer,
         bookReducer
     })
 }
 
-module.exports = rootReducer;

@@ -1,6 +1,6 @@
-const Student = require('../src/features/student');
-const Book = require('../src/features/book');
-const configureStore = require("./app/store");
+import Student from './features/student/index.js';
+import Book from './features/book/index.js';
+import {configureStore} from './app/store.js';
 
 const store = configureStore();
 store.subscribe(() => {

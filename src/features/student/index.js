@@ -1,4 +1,4 @@
-const {changeNameAction, addAgeAction} = require("./actions");
+import {changeNameAction, addAgeAction} from './actions.js';
 
 class Student {
     constructor({store} = {}) {
@@ -20,5 +20,5 @@ class Student {
 }
 
 
-module.exports = Student;
+export default Student;
 

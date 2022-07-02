@@ -1,8 +1,6 @@
-const {createStore} = require('redux');
-const rootReducer = require('./rootReducer');
+import {createStore} from 'redux';
+import {rootReducer} from './rootReducer.js';
 
-function configureStore() {
+export function configureStore() {
     return createStore(rootReducer());
 }
-
-module.exports = configureStore;
