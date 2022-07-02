@@ -1,4 +1,4 @@
-const redux = require('redux');
+import redux from 'redux';
 // Source of truth, repository global, database
 const createStore = redux.createStore;
 
