@@ -1,0 +1,10 @@
+const STUDENT_ADD_BOOK = 'STUDENT_ADD_BOOK';
+const STUDENT_ADD_AGE = 'STUDENT_ADD_AGE';
+const STUDENT_CHANGE_NAME = 'STUDENT_CHANGE_NAME';
+
+//CommonJS export-import
+module.exports = {
+    STUDENT_ADD_AGE,
+    STUDENT_CHANGE_NAME,
+    STUDENT_ADD_BOOK
+}
